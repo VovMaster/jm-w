@@ -1162,6 +1162,11 @@ img {
   text-align: center;
   padding: 7px;
   margin-bottom: 10px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
 }
 .links:hover {
   text-decoration: none;
@@ -1253,6 +1258,76 @@ img {
   background-color: #ffffff;
   padding: 20px 40px;
 }
+/*--------------ACCORDION-------------*/
+.accordion-heading {
+  font-weight: 700;
+  padding: 15px 10px 15px 10px;
+  color: #000000;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #e0e2e5;
+}
+.accordion-heading:hover,
+.accordion-heading:focus,
+.accordion-heading:active {
+  text-decoration: none;
+  color: #000000;
+}
+.accordion {
+  font-size: 14px;
+}
+.accordion-content {
+  border-bottom: 1px solid #000000;
+  display: none;
+}
+.accordion-content.open {
+  display: block;
+}
+.accordion-content a {
+  color: #000000;
+  padding: 10px 40px 10px 20px;
+  background-color: #f7f7f7;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #e0e2e5;
+}
+.accordion-content a svg {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+.accordion-content a:hover {
+  text-decoration: none;
+}
+.plus {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  margin-top: -10px;
+}
+.plus:before,
+.plus:after {
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  content: "";
+  margin-top: -1px;
+}
+.plus:before {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.plus.close:before {
+  background-color: transparent;
+}
 .main-footer {
   padding: 20px 0 10px;
   font-size: 12px;
@@ -1309,27 +1384,67 @@ img {
   vertical-align: middle;
   margin: 0 3px;
 }
-/*--------------ACCORDION-------------*/
-.accordion-heading {
-  font-weight: 700;
-  padding: 15px 10px 15px 10px;
+/*---------------------MENU---------------*/
+.menu-block {
+  font-size: 12px;
+  background-color: #ffffff;
+  margin-right: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.menu-block a {
   color: #000000;
+}
+.menu a {
+  padding: 10px 10px;
+  border-bottom: 1px solid #edeeef;
   display: block;
 }
-.accordion-heading:hover {
+.top-block-menu {
+  line-height: 30px;
+}
+.top-block-menu a {
+  border-left: 1px solid #edeeef;
+}
+.btn-close svg {
+  width: 17px;
+  height: 17px;
+  margin: 10px;
+}
+.number-block {
+  background-color: #000000;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 17px;
+  border-radius: 17px;
+  width: 25px;
+  font-size: 10px;
+}
+.tabs {
+  border-bottom: 1px solid #edeeef;
+  border-top: 1px solid #edeeef;
+}
+.tabs a {
+  text-align: center;
+  float: left;
+  width: 25%;
+  border-left: 1px solid #edeeef;
+  padding: 10px;
+}
+.tabs a:hover {
   text-decoration: none;
 }
-.accordion {
-  font-size: 14px;
+.tabs svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
 }
-.accordion-content a {
-  color: #000000;
-  padding: 10px 10px 10px 20px;
-  background-color: #dda;
+.tabs span {
   display: block;
-}
-.accordion-content a:hover {
-  text-decoration: none;
 }
 .form-control {
   font-size: 12px;
@@ -1411,21 +1526,21 @@ img {
 .btn.active.focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #fff;
+  color: #black;
+  background-color: #ffffff;
+  border-color: #df7931;
   text-decoration: none;
-  background-color: #9e8c57;
 }
 .btn:active,
 .btn.active {
   background-image: none;
   outline: 0;
-  background-color: #a89661;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .btn-radius {
   border-radius: 3px;
