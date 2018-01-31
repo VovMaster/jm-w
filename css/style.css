@@ -3775,6 +3775,13 @@ img {
   background-color: #ffffff;
   padding: 20px 40px;
 }
+.main-footer {
+  padding: 20px 0 10px;
+  font-size: 12px;
+  text-align: center;
+  color: #979797;
+
+
 .products-images {
   list-style: none;
   padding: 0;
@@ -3782,28 +3789,114 @@ img {
   white-space: nowrap;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+.main-footer svg {
+  width: 50px;
+  margin-bottom: 5px;
 .products-images li {
   display: inline-block;
   width: 280px;
   vertical-align: top;
   margin-left: 10px;
 }
+.main-header {
+  padding: 10px;
 .products-images li:first-child {
   margin-left: 0;
 }
+.main-header svg {
+  font-size: 22px;
 .products-images img {
   display: block;
   width: 100%;
   height: auto;
   margin: 0;
 }
+.nav-btn {
+  cursor: pointer;
+  display: inline-block;
 .wrap-products-images {
   margin-bottom: 50px;
 }
+.number {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  color: #ffffff;
+  width: 100%;
 .form-product {
   text-align: center;
 }
+.header-info {
+  text-align: right;
 .form-product h2 {
   font-size: 18px;
   font-weight: 600;
@@ -3811,6 +3904,7 @@ img {
   margin-bottom: 15px;
   text-transform: uppercase;
 }
+.header-info a {
 .form-product a {
   color: inherit;
 }
@@ -3844,6 +3938,7 @@ img {
   height: 30px;
   width: 30px;
   display: inline-block;
+  text-align: right;
   vertical-align: top;
   margin: 0 7px;
   border-radius: 100%;
@@ -3859,16 +3954,29 @@ img {
   position: relative;
   z-index: -1;
 }
+.likes svg {
+  color: #ed4856;
 .swatches-wrap {
   margin-bottom: 25px;
 }
+.search {
+  border: none;
+  background-color: transparent;
+  padding: 0 10px;
 .description-section {
   margin-top: 40px;
 }
+.header-text {
+  text-align: center;
+  font-size: 10px;
+  display: inline-block;
+  vertical-align: middle;
 .description-section h4,
 .description-section h5 {
   margin: 20px 0 10px;
 }
+.header-text svg {
+  font-size: 24px;
 .social-icon {
   margin-top: 35px;
   padding: 15px 0;
@@ -3877,9 +3985,16 @@ img {
 }
 .social-icon li {
   display: inline-block;
+  vertical-align: middle;
+  margin: 0 3px;
   vertical-align: top;
   margin-right: 4px;
 }
+/*--------------ACCORDION-------------*/
+.accordion-heading {
+  font-weight: 700;
+  padding: 15px 10px 15px 10px;
+  color: #000000;
 .social-icon a {
   text-decoration: none;
   color: #000;
@@ -3903,9 +4018,46 @@ img {
   color: #333;
   font-size: 11px;
 }
+.accordion-heading:hover {
+  text-decoration: none;
 .mini-list .promo {
   display: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+.accordion {
+  font-size: 14px;
+
+
 .mini-list .swatches-wrap {
   display: none;
 }
@@ -3923,6 +4075,10 @@ img {
   font-size: 14px;
   text-align: center;
 }
+.accordion-content a {
+  color: #000000;
+  padding: 10px 10px 10px 20px;
+  background-color: #dda;
 .follow-instagram h2 {
   margin-bottom: 15px;
 }
@@ -3935,11 +4091,23 @@ img {
   width: 100%;
   display: block;
 }
+.accordion-content a:hover {
+  text-decoration: none;
+}
 .view-all {
   text-transform: uppercase;
   line-height: 100px;
   color: #999;
 }
+.form-control {
+  font-size: 12px;
+  line-height: 28px;
+  font-family: 'Noto Sans', sans-serif;
+  color: #000000;
+  outline: none;
+  border: none;
+  border: 1px solid #e0e2e5;
+  background: transparent;
 .mini-list2 > li {
   width: 50%;
 }
@@ -3948,58 +4116,152 @@ img {
   font-size: 11px;
   margin: 10px 0;
   display: block;
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px;
+  height: 37px;
+  letter-spacing: 0;
 }
+.form-control:focus {
+  border-color: #000000;
 .mini-list2 .swatches-wrap {
   margin: 0;
   line-height: normal;
   display: block;
 }
+.form-group {
+  margin-bottom: 22px;
 .mini-list2 .nav-swatches li {
   width: 22px;
   height: 22px;
   margin: 0 2px;
 }
+.form-group:last-child {
+  margin-bottom: 0;
 .mini-list2 .original-price {
   font-size: 11px;
 }
+*::-webkit-input-placeholder {
+  color: #4f4f4e;
+  opacity: 1;
 .mini-list2 .sale-price {
   font-size: 11px;
 }
+*::-moz-placeholder {
+  color: #4f4f4e;
+  opacity: 1;
 .mini-list2 .view-all {
   line-height: 220px;
   font-size: 18px;
 }
+*:-ms-input-placeholder {
+  color: #4f4f4e;
+  opacity: 1;
 .mini-list2 .title-categoty {
   display: block;
 }
+*:-moz-placeholder {
+  color: #4f4f4e;
+  opacity: 1;
 .title-categoty {
   margin-top: 10px;
 }
+.btn {
+  font-family: 'Noto Sans', sans-serif;
 .tobi-grid {
   display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 7px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #000000;
+  background-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   background: url(../images/3x3.png) no-repeat center;
   background-size: 100%;
   width: 24px;
   height: 24px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid #000000;
+  border-radius: 0;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  outline: none !important;
 }
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  border-radius: 4px;
 .tobi-grid .active {
   background: url(../images/2x2.png) no-repeat center;
+
+
+
+
+
+
+
 }
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #9e8c57;
 .filter {
   float: right;
   font-size: 12px;
   text-transform: uppercase;
+
+
+
 }
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  background-color: #a89661;
+  border-radius: 4px;
 .filter a {
   color: #000;
+
+
+
 }
+.btn-radius {
+  border-radius: 3px;
 .filter .fa {
   margin-left: 10px;
 }
+.btn-black {
+  background-color: #000000;
+  color: #ffffff;
 .wrap-tobi-grid {
   padding: 10px 0;
 }
+.btn-white {
+  background-color: #ffffff;
+  color: #2a2a2a;
+  border-color: #ffffff;
 .main-footer {
   padding: 20px 0 10px;
   font-size: 12px;
