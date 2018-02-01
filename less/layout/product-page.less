@@ -233,3 +233,108 @@
 .wrap-tobi-grid {
 	padding: 10px 0;
 }
+
+.price-basket {
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	font-size: 14px;
+	font-weight: 700;
+}
+.checkout {
+	position: relative;
+	padding: 20px 10px;
+	border-bottom: 1px solid #e0e0e0;
+	.fa-close {
+		float: right;
+		font-size: 14px;
+		color: #000;
+	}
+	.row > * {
+		position: static;
+	}
+}
+
+.total-discount {
+	padding: 30px 0;
+	font-size: 14px;
+	line-height: 25px;
+}
+.text-right {
+	text-align: right;
+}
+
+.title-page {
+	text-align: center;
+	padding: 20px 10px;
+	border-bottom: 1px solid #e0e0e0;
+	margin: 0;
+	font-weight: 400;
+}
+
+.help-links {
+	font-size: 0;
+	text-align: center;
+	letter-spacing: 0;
+	padding: 20px 0 0 0;
+	a {
+		border: 1px solid #ddd;
+		display: block;
+		text-decoration: none;
+		color: #333;
+		padding: 10px;
+		margin-bottom: 20px;
+		&:after {
+			content: " ";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100px;
+		}
+	}
+	h5 {
+		font-size: 12px;
+	    line-height: 15px;
+	    display: inline-block;
+	    text-transform: uppercase;
+	    font-weight: 400;
+	    vertical-align: middle;
+	    color: #333;
+	    width: 100%;
+    }
+}
+.content-accordion-style {
+	display: none;
+	padding-bottom: 10px;
+}
+.title-accordion-style {
+	position: relative;
+	padding: 20px 50px 20px 0;
+	cursor: pointer;
+	h5 {
+		margin: 0;
+		font-size: 16px;
+		color: #000;
+	}
+	.fa {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -14px;
+		font-size: 18px;
+		.transition(0.2s);
+	}
+}
+.accordion-style-wrap {
+	margin-bottom: 50px;
+}
+
+.accordion-style {
+	border-bottom: 1px solid #e0e0e0;
+	&.open {
+		.title-accordion-style {
+			.fa {
+				.rotate(90deg);
+			}
+		}
+	}
+}

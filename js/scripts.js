@@ -11,4 +11,13 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$('.mini-list').toggleClass('mini-list2');
 	});
+	$('.title-accordion-style').click(function() {
+		if($(this).parent().hasClass('open')) {
+			$(this).parent().removeClass('open');
+			$(this).next().slideUp(400);
+		}else {
+			$(this).parent().addClass('open');
+			$(this).next().slideDown(400);
+		}
+	});
 });

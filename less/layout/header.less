@@ -1,5 +1,15 @@
 .main-header{
 	padding: 10px;
+	border-bottom: 1px solid #919191;
+	margin-bottom: 10px;
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+		> * {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 	svg{
 		font-size: 22px;
 	}
@@ -28,6 +38,9 @@
 .likes{
 	svg{
 		color: rgb(237, 72, 86);
+	}
+	.number {
+		bottom: 7px;
 	}
 }
 .basket{
@@ -61,6 +74,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 2;
+	display: none;
 	a{
 		color: @black;
 	}
