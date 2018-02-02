@@ -1,32 +1,4 @@
 @font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/NotoSans/notosans-bold.eot');
-  src: url('../fonts/NotoSans/notosans-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans/notosans-bold.woff2') format('woff2'), url('../fonts/NotoSans/notosans-bold.woff') format('woff'), url('../fonts/NotoSans/notosans-bold.ttf') format('truetype'), url('../fonts/NotoSans/notosans-bold.svg#noto_sansbold') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/NotoSans/notosans-bolditalic.eot');
-  src: url('../fonts/NotoSans/notosans-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans/notosans-bolditalic.woff2') format('woff2'), url('../fonts/NotoSans/notosans-bolditalic.woff') format('woff'), url('../fonts/NotoSans/notosans-bolditalic.ttf') format('truetype'), url('../fonts/NotoSans/notosans-bolditalic.svg#noto_sansbold_italic') format('svg');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/NotoSans/notosans-italic.eot');
-  src: url('../fonts/NotoSans/notosans-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans/notosans-italic.woff2') format('woff2'), url('../fonts/NotoSans/notosans-italic.woff') format('woff'), url('../fonts/NotoSans/notosans-italic.ttf') format('truetype'), url('../fonts/NotoSans/notosans-italic.svg#noto_sansitalic') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/NotoSans/notosans-regular.eot');
-  src: url('../fonts/NotoSans/notosans-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans/notosans-regular.woff2') format('woff2'), url('../fonts/NotoSans/notosans-regular.woff') format('woff'), url('../fonts/NotoSans/notosans-regular.ttf') format('truetype'), url('../fonts/NotoSans/notosans-regular.svg#noto_sansregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/font-awesome/fontawesome-webfont.eot');
   src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'), url('../fonts/font-awesome/fontawesome-webfont.woff') format('woff'), url('../fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/font-awesome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
@@ -3451,7 +3423,7 @@ h6,
 .form-control {
   font-size: 12px;
   line-height: 28px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #000000;
   outline: none;
   border: none;
@@ -3490,7 +3462,7 @@ h6,
   opacity: 1;
 }
 .btn {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: inline-block;
   padding: 4px 12px;
   margin-bottom: 0;
@@ -3577,20 +3549,23 @@ h6,
   padding-left: 0;
   padding-right: 0;
 }
-.main-header svg {
-  font-size: 22px;
-}
 .nav-btn {
   cursor: pointer;
   display: inline-block;
+  color: #000000;
+}
+.nav-btn .fa {
+  font-size: 22px;
+  line-height: 22px;
 }
 .number {
   position: absolute;
-  bottom: 3px;
+  bottom: 2px;
   left: 0;
   color: #ffffff;
   width: 100%;
   text-align: center;
+  font-weight: 700;
 }
 .header-info {
   text-align: right;
@@ -3600,11 +3575,21 @@ h6,
   text-align: right;
   position: relative;
 }
-.likes svg {
+.header-info a .fa {
+  font-size: 20px;
+  line-height: 20px;
+}
+.likes .fa {
   color: #ed4856;
 }
 .likes .number {
-  bottom: 7px;
+  bottom: 4px;
+}
+.basket {
+  margin-left: 10px;
+}
+.basket .fa {
+  color: #42d3c9;
 }
 .search {
   border: none;
@@ -3613,20 +3598,18 @@ h6,
   vertical-align: top;
 }
 .search .fa {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 .header-text {
   text-align: center;
   font-size: 10px;
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 14px;
+  margin-top: 5px;
 }
-.header-text svg {
-  font-size: 24px;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 3px;
+.header-text .fa {
+  font-size: 14px;
+  margin: 0 5px;
 }
 /*---------------------MENU---------------*/
 .menu-block {
@@ -3635,30 +3618,41 @@ h6,
   margin-right: 40px;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  right: 100%;
+  width: 280px;
   bottom: 0;
   z-index: 2;
-  display: none;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.menu-block.open {
+  right: 0;
 }
 .menu-block a {
   color: #000000;
 }
 .menu a {
-  padding: 10px 10px;
+  padding: 10px 40px 10px 10px;
   border-bottom: 1px solid #edeeef;
   display: block;
+  position: relative;
+}
+.menu .fa {
+  color: #b8baba;
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
 }
 .top-block-menu {
   line-height: 30px;
 }
 .top-block-menu a {
   border-left: 1px solid #edeeef;
-}
-.btn-close svg {
-  width: 17px;
-  height: 17px;
-  margin: 10px;
+  display: inline-block;
+  padding: 0 10px;
 }
 .number-block {
   background-color: #000000;
@@ -3668,6 +3662,9 @@ h6,
   border-radius: 17px;
   width: 25px;
   font-size: 10px;
+}
+.number-block.red {
+  background-color: #ed4856;
 }
 .tabs {
   border-bottom: 1px solid #edeeef;
@@ -3679,17 +3676,80 @@ h6,
   width: 25%;
   border-left: 1px solid #edeeef;
   padding: 10px;
+  position: relative;
+}
+.tabs a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+  right: 0;
+  opacity: 0;
 }
 .tabs a:hover {
   text-decoration: none;
 }
-.tabs svg {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
+.tabs a.current:after,
+.tabs a.active:after,
+.tabs a:active:after {
+  opacity: 1;
 }
 .tabs span {
   display: block;
+}
+.tabs .fa {
+  font-size: 15px;
+}
+.icon-close {
+  position: relative;
+  padding: 10px 10px 0 10px;
+  width: 37px;
+  display: inline-block;
+}
+.icon-close:before,
+.icon-close:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 17px;
+  content: "";
+  background-color: #000000;
+  margin-left: -8px;
+}
+.icon-close:before {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.icon-close:after {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.menu-breadcrumbs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+}
+.menu-breadcrumbs li {
+  float: left;
+  padding: 10px;
+}
+.menu-breadcrumbs li .fa {
+  margin-right: 5px;
+  color: #b8baba;
+}
+.menu-breadcrumbs li:first-child {
+  content: "";
+  background-color: #ffffff;
+  padding: 10px 20px 10px 10px;
+}
+.menu-breadcrumbs li.current {
+  color: #ffffff;
 }
 html {
   font-size: 18px;
@@ -3700,13 +3760,25 @@ body {
   font-size: 10px;
   line-height: 1.4;
   color: #000000;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   background: #ffffff;
-  height: 100%;
+  min-height: 100%;
   letter-spacing: 0;
   -webkit-overflow-scrolling: touch;
+}
+body.body-bg {
+  position: relative;
+}
+body.body-bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 @media (min-width: 768px) {
   body {
@@ -3850,7 +3922,7 @@ img {
   margin-bottom: 3px;
 }
 .sign-up-block {
-  background-image: url(../images/flower-bg.jpg);
+  background-color: #f7f7f7;
   padding: 40px 0;
   color: #b8baba;
   text-align: center;
@@ -3858,6 +3930,15 @@ img {
 .sign-up-block form {
   background-color: #ffffff;
   padding: 20px 40px;
+}
+.sign-up-block h4 {
+  color: #000000;
+}
+.sign-up-block .btn + p {
+  margin-top: 5px;
+}
+.sign-up-block .btn + p a {
+  color: #000000;
 }
 /*--------------ACCORDION-------------*/
 .accordion-heading {
@@ -3892,13 +3973,9 @@ img {
   position: relative;
   border-bottom: 1px solid #e0e2e5;
 }
-.accordion-content a svg {
+.accordion-content a .fa {
   position: absolute;
-  top: 50%;
-  right: 12px;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
+  right: 18px;
 }
 .accordion-content a:hover {
   text-decoration: none;
@@ -4178,6 +4255,9 @@ img {
   padding: 30px 0;
   font-size: 14px;
   line-height: 25px;
+}
+.total-discount .btn {
+  margin-top: 20px;
 }
 .text-right {
   text-align: right;

@@ -10,13 +10,25 @@ body{
   font-size: 10px;
   line-height: 1.4;
   color: @black;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   background: #ffffff;
-  height: 100%;
+  min-height: 100%;
   letter-spacing: 0;
 -webkit-overflow-scrolling:touch;
+	&.body-bg{
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
 }
 @media (min-width: 768px) {
 	body {
@@ -153,13 +165,22 @@ img{
 	}
 }
 .sign-up-block{
-	background-image: url(../images/flower-bg.jpg);
+	background-color: #f7f7f7;
 	padding: 40px 0;
 	color: rgb(184, 186, 186);
 	text-align: center;
 	form{
 		background-color: @white;
 		padding: 20px 40px;
+	}
+	h4{
+		color: @black;
+	}
+	.btn + p{
+		margin-top: 5px;
+		a{
+			color: @black;
+		}
 	}
 }
 /*--------------ACCORDION-------------*/
@@ -193,13 +214,9 @@ img{
 		display: block;
 		position: relative;
 		border-bottom: 1px solid rgb(224, 226, 229);
-		svg{
-			position: absolute;
-			top: 50%;
-			right: 12px;
-			width: 20px;
-			height: 20px;
-			margin-top: -10px;
+		.fa{
+			position: absolute;			
+			right: 18px;
 		}
 		&:hover{
 			text-decoration: none;
