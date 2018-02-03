@@ -4,9 +4,11 @@ $(document).ready(function() {
 	});*/
 	$('.nav-btn').click(function() {
 		$('.menu-block').toggleClass('open');
+		$('body').toggleClass('body-bg');
 		return false
 	});
-	$('.nav-btn').click(function() {
+	$('.btn-close').click(function() {
+		$('.menu-block').toggleClass('open');
 		$('body').toggleClass('body-bg');
 		return false
 	});
@@ -32,4 +34,12 @@ $(document).ready(function() {
 			$(this).next().slideDown(400);
 		}
 	});
+
+	// $('.menu a').click(function(){
+	// 	if( $(this).children('.fa').length ) {
+	// 		$(this).parent().parent().after($(this).next());
+	// 		$(this).parent().parent().hide();
+	// 		return false
+	// 	}
+	// })
 });

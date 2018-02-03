@@ -83,19 +83,28 @@
 	margin-right: 40px;
 	position: absolute;
 	top: 0;
-	right: 100%;
+	margin-left: -280px;
+	left: 0;
 	width: 280px;
 	bottom: 0;
 	z-index: 2;
 	.transition(0.2s);
 	&.open{
-		right: 0;
+		margin-left: 0; 
 	}
 	a{
 		color: @black;
 	}
 }
 .menu{
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.active > a {
+		font-weight: 700;
+	}
 	a{
 		
 		padding: 10px 40px 10px 10px;
@@ -116,6 +125,14 @@
 		border-left: 1px solid rgb(237, 238, 239);
 		display: inline-block;
 		padding: 0 10px;
+		&:not(.btn-close) {
+			text-align: center;
+			width: 103px;
+		}
+		&.btn-close {
+			text-align: center;
+			width: 67px;
+		}
 	}
 }
 .number-block{
